@@ -1,0 +1,76 @@
+// Estilo del Footer
+footer {
+  grid-area: footer; // Coloca el pie de página en un área específica del grid
+  display: flex;
+  justify-content: space-around; // Distribuye uniformemente el espacio entre los elementos secundarios
+  align-items: center; // Centra verticalmente los elementos secundarios
+  background-color: $primary-color;
+  padding: 20px;
+
+  // Estilo de la información de la tienda
+  #informacion-tienda {
+    text-align: center;
+
+    h2 {
+      font-size: 1.5em;
+      margin: 0;
+      color: $secondary-color;
+    }
+
+    p {
+      font-size: 1em;
+      margin-top: 0px;
+      color: $text-color1; // Color del texto, utilizando la variable $text-color
+    }
+  }
+
+  // Barra separadora entre secciones del pie de página
+  .barra-separadora {
+    height: 100px;
+    width: 2px;
+    background-color: $background-color;
+    margin: 0 20px;
+  }
+
+  // Enlaces de interés en el pie de página
+  #enlaces-interes {
+    text-align: left;
+
+    h2 {
+      font-size: 1.5em;
+      margin: 0;
+      color: $secondary-color;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 10px;
+
+      li a {
+        text-decoration: none; // Elimina la decoración que tiene por defecto el enlace
+        color: $secondary-color;
+        font-weight: bold;
+
+        // Estilo al pasar el ratón sobre el enlace
+        &:hover {
+          color: $text-color1; // Cambia el color del texto al pasar el ratón, utilizando la variable $text-color
+        }
+      }
+    }
+  }
+
+  a {
+    cursor: pointer;
+
+    //Estilo imagen de licencia de uso
+    #licencia {
+      max-width: 100%; // Ancho máximo del 100% del contenedor padre
+      height: auto; // Mantiene la proporción original de la imagen
+      width: 150px; // Ancho inicial de la imagen
+      margin-left: 20px;
+    }
+  }
+
+
+}

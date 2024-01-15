@@ -1,0 +1,50 @@
+/* Personaliza el estilo de la barra de navegación */
+nav.navbar {
+  padding: 1rem 0; // Aumenta el espacio interno de la barra de navegación
+}
+
+/* Centra verticalmente el contenido del encabezado en la barra de navegación */
+header {
+  display: flex;
+  align-items: center;
+
+  .navbar{
+    width: 100%;
+  }
+
+  .navbar-brand {
+    margin-right: 1rem;
+    color: #fff; // Color blanco
+    font-style: italic; // Estilo cursiva
+  }
+  
+  /* Alinea los enlaces a la derecha */
+  .navbar-nav {
+    margin-left: auto;
+
+    .nav-item{
+      margin-right: 0.5rem;
+    }
+
+    .navbar-nav .nav-link {
+      margin: 0.25rem;
+    }
+  }
+}
+
+nav.navbar {
+  padding: 1rem 0; // Aumenta el espacio interno de la barra de navegación
+}
+
+
+
+.navbar-custom {
+  background-color: #3498db;
+}
+
+
+
+/* Añade un poco de espacio en la parte inferior de la barra de navegación */
+body {
+  padding-bottom: 4rem;
+}

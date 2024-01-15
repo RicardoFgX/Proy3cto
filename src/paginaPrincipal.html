@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <title>Ejemplo Tienda</title>
+</head>
+
+<body id="paginaPrincipal">
+  <header>
+    <div id="logo">
+        <div class="logo-container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="logo-img">
+                <a href="paginaPrincipal.html">
+                    <image href="images/LogoPagina.svg" width="60" height="60" />
+                </a>
+            </svg>
+        </div>
+        <h1 class="nombreEmpresa">Candy Soap</h1>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a href="paginaPrincipal.html" class="nav-link">
+                    <i class="bi bi-house-door align-middle"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="formulario.html" class="nav-link">
+                    <i class="bi bi-table align-middle"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="bi bi-grid align-middle"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="stacked1 nav-link" style="padding-right: 0rem;">
+                    <i class="bi bi-cart align-middle"></i>
+                  </a>
+                </li>
+                <li class="nav-item shaked">
+                  <a href="#" class=" stacked2 nav-link" style="padding-left: 0rem">
+                    <i class="bi bi-bell align-middle"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="bi bi-person-circle align-middle"></i>
+                  </a>
+                </li>
+              </ul>
+        </div>
+    </nav>
+</header>
+  <div id="elementosInicio">
+    <div id="video-container">
+      <video id="video-fondo" autoplay muted loop>
+        <source src="multimedia/VideoJabones.mp4" type="video/mp4" />
+        Tu navegador no soporta el tag de video.
+      </video>
+    </div>
+
+    <button id="cerrar-video-fondo" onclick="cerrarVideoFondo()">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <div id="panel">
+      <h1>¡Bienvenido a CandySoap!</h1>
+      <p>Nuestra tienda de jabones 100% artesanales.</p>
+      <button id="cerrar-panel" onclick="cerrarVideoFondo()">
+        Ir a la página Principal
+      </button>
+    </div>
+  </div>
+  <div class="barra-lateral">
+    <img src="multimedia/banner.gif" alt="Banner GIF" />
+    <section id="categorias">
+      <h2>Categorías</h2>
+      <ul>
+        <li><a href="#">Jabones Antibacterianos</a></li>
+        <li><a href="#">Jabones Exfoliantes</a></li>
+        <li><a href="#">Jabones Naturales</a></li>
+      </ul>
+    </section>
+    <section id="filtros">
+      <h2>Filtros</h2>
+      <label for="precio">Precio:</label>
+      <input type="range" id="precio" name="precio" min="0" max="100" />
+      <fieldset>
+        <legend>Aroma</legend>
+        <ul>
+          <li>
+            <input type="radio" id="opcion1" name="filtrado1" />
+            <label for="opcion1">Cítricos</label>
+          </li>
+          <li>
+            <input type="radio" id="opcion2" name="filtrado1" />
+            <label for="opcion2">Floral</label>
+          </li>
+          <li>
+            <input type="radio" id="opcion3" name="filtrado1" />
+            <label for="opcion3">Herbal</label>
+          </li>
+          <li>
+            <input type="radio" id="opcion4" name="filtrado1" />
+            <label for="opcion4">Menta</label>
+          </li>
+          <li>
+            <input type="radio" id="opcion5" name="filtrado1" />
+            <label for="opcion5">Lavanda</label>
+          </li>
+          <li>
+            <input type="radio" id="opcion6" name="filtrado1" />
+            <label for="opcion6">Sin Fragancia</label>
+          </li>
+        </ul>
+      </fieldset>
+    </section>
+  </div>
+  <main id="contenido-principal" class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon1.jpg" alt="Producto 1" />
+          <h3>Producto 1</h3>
+          <span class="precio">19.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon2.jpg" alt="Producto 2" />
+          <h3>Producto 2</h3>
+          <span class="precio">15.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon3.jpg" alt="Producto 3" />
+          <h3>Producto 3</h3>
+          <span class="precio">15.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon4.jpg" alt="Producto 4" />
+          <h3>Producto 4</h3>
+          <span class="precio">15.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon5.jpg" alt="Producto 5" />
+          <h3>Producto 5</h3>
+          <span class="precio">15.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon6.jpg" alt="Producto 6" />
+          <h3>Producto 6</h3>
+          <span class="precio">15.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon7.jpg" alt="Producto 7" />
+          <h3>Producto 7</h3>
+          <span class="precio">15.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon8.jpg" alt="Producto 8" />
+          <h3>Producto 8</h3>
+          <span class="precio">15.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="producto">
+          <img src="images/jabon9.jpg" alt="Producto 9" />
+          <h3>Producto 9</h3>
+          <span class="precio">15.99</span>
+          <button>Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+    <p class="usoImagenes">
+      Todas las imágenes son de uso libre del sitio web
+      <a href="https://www.pexels.com">Pexels</a>
+    </p>
+  </main>
+  <footer>
+    <div id="informacion-tienda">
+      <h2>Información de la Tienda</h2>
+      <p>Descripción de la tienda y otros detalles.</p>
+    </div>
+    <div class="barra-separadora"></div>
+    <div id="enlaces-interes">
+      <h2>Enlaces de Interés</h2>
+      <ul>
+        <li><a href="#">Términos y Condiciones</a></li>
+        <li><a href="#">Política de Privacidad</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+    <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank">
+      <img src="images/Licencia0.png" alt="licencia" id="licencia" />
+    </a>
+  </footer>
+
+  <script>
+    function cerrarVideoFondo() {
+      document.getElementById("video-fondo").remove();
+      document.getElementById("cerrar-video-fondo").remove();
+      document.getElementById("panel").remove();
+      document.getElementById("paginaPrincipal").style.overflow = "visible";
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Encuentra la URL actual y agrega la clase "active" al enlace correspondiente
+      var url = window.location.pathname;
+      $('.nav-item a[href="' + url + '"]').parent().addClass('active');
+    });
+  </script>
+
+</body>
+
+</html>

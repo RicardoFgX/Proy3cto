@@ -1,0 +1,85 @@
+// Estilos globales para el formulario
+.formularioGlobal {
+  display: flex;
+  justify-content: center;
+  margin-top: 92px;
+  margin-bottom: 92px;
+  text-align: center;
+
+  // Estilo para el formulario
+  .formulario {
+    background-color: $background-color;
+    padding: 20px;
+    width: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  // Sombra con opacidad
+    border-radius: 5px;
+    text-align: left;
+  }
+
+  // Estilo para la leyenda del formulario
+  legend {
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  // Estilo para las etiquetas del formulario
+  label {
+    display: block; 
+    margin-top: 10px;
+    color: $register-label-color;
+
+    // Pseudo-elemento para agregar un asterisco después del texto de la etiqueta
+    ::after {
+      content: "*";
+      color: $register-label-color;
+    }
+  }
+
+  // Estilo para los campos de entrada del formulario
+  input {
+    width: 99%;
+    height: 25px;
+    border: 1px solid $input-border-color;
+    border-radius: 3px;
+    margin-top: 5px;
+
+    // Estilo para el estado inválido del campo de entrada
+    &:invalid {
+      border: 2px solid $error-color;
+    }
+
+    // Estilo para el estado válido del campo de entrada
+    &:valid {
+      border: 2px solid $success-color;
+    }
+
+    // Estilo al hacer focus en el campo de entrada
+    &:focus {
+      border: 2px solid $primary-color;
+      outline: none; // Quita el contorno predeterminado
+    }
+
+    // Estilo al pasar el ratón por encima en el campo de entrada
+    &:hover {
+      border: 2px solid $primary-color;
+    }
+
+    // Estilo para el campo de entrada con el atributo "type" igual a "submit"
+    &[type="submit"] {
+      background-color: $primary-color; 
+      width: 100%;
+      height: 40px;
+      color: $text-color1;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-top: 10px;
+
+      // Estilo al pasar el ratón encima
+      &:hover {
+        background-color: darken($primary-color, 10%);  // Color del botón al pasar el mouse, oscurecido en un 10%
+      }
+    }
+  }
+}

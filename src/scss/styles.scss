@@ -1,0 +1,31 @@
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+// Importación de variables generales
+@import 'base/variables';
+
+// Importación de estilos para botones
+@import 'components/buttons';
+
+// Importación de estilos para tarjetas de los proudctos
+@import 'components/cards';
+
+// Importación de estilos para el encabezado
+@import 'layout/header';
+
+// Importación de estilos para la barra lateral
+@import 'layout/sidebar';
+
+// Importación de estilos para el contenido principal
+@import 'layout/main-content';
+
+// Importación de estilos para el pie de página
+@import 'layout/footer';
+
+// Importación de estilos específicos para la vista de catálogo
+@import 'views/catalog';
+
+// Importación de estilos específicos para la vista de registro
+@import 'views/register';

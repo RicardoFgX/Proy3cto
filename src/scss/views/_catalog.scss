@@ -1,0 +1,40 @@
+// Estilo para el elemento con el id "paginaPrincipal"
+#paginaPrincipal {
+  display: grid; // Utiliza un modelo de caja de cuadrícula
+  overflow: hidden;
+  grid-template-areas:
+    "header"
+    "barra contenido"
+    "footer footer";
+}
+
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: $small-screen) {
+
+  .barra-lateral,
+  .nombreEmpresa {
+    display: none; // Oculta elementos con las clases .barra-lateral y .nombreEmpresa
+  }
+
+  #licencia{
+    display: none;
+  }
+
+  //Configura el grid ahora que no tiene el elemento "barra lateral"
+  #paginaPrincipal {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "contenido contenido"
+      "footer footer";
+  }
+}
+
+// Media Query para pantallas medianas
+@media screen and (min-width: $medium-screen-min) and (max-width: $medium-screen-max) {
+  // Muestra las tarjetas en 2 columnas en pantallas medianas
+}
+
+// Media Query para pantallas grandes
+@media screen and (min-width: $large-screen-min) {
+}
