@@ -4,6 +4,8 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const opn = require('opn');
+const miniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebPackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -23,7 +25,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html', filename: 'index.html' }),
     new HtmlWebpackPlugin({ template: './src/formulario.html', filename: 'formulario.html' }),
-    new HtmlWebpackPlugin({ template: './src/paginaPrincipal.html', filename: 'paginaPrincipal.html' })
+    new HtmlWebpackPlugin({ template: './src/paginaPrincipal.html', filename: 'paginaPrincipal.html' }),
+    new miniCssExtractPlugin(),
+    new CopyWebPackPlugin({
+      patterns: [
+        { from: 'src/images', to: 'images'}
+      ],
+    }),
   ],
   module: {
     rules: [
@@ -31,7 +39,7 @@ module.exports = {
         test: /\.(scss)$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: miniCssExtractPlugin.loader
           },
           {
             loader: 'css-loader'
