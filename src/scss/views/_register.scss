@@ -1,10 +1,7 @@
 // Estilos globales para el formulario
 .formularioGlobal {
-  display: flex;
-  justify-content: center;
-  margin-top: 92px;
-  margin-bottom: 92px;
-  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   // Estilo para el formulario
   .formulario {
@@ -37,11 +34,6 @@
 
   // Estilo para los campos de entrada del formulario
   input {
-    width: 99%;
-    height: 25px;
-    border: 1px solid $input-border-color;
-    border-radius: 3px;
-    margin-top: 5px;
 
     // Estilo para el estado inválido del campo de entrada
     &:invalid {
@@ -62,24 +54,6 @@
     // Estilo al pasar el ratón por encima en el campo de entrada
     &:hover {
       border: 2px solid $primary-color;
-    }
-
-    // Estilo para el campo de entrada con el atributo "type" igual a "submit"
-    &[type="submit"] {
-      background-color: $primary-color; 
-      width: 100%;
-      height: 40px;
-      color: $text-color1;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      margin-top: 10px;
-
-      // Estilo al pasar el ratón encima
-      &:hover {
-        background-color: darken($primary-color, 10%);  // Color del botón al pasar el mouse, oscurecido en un 10%
-      }
     }
   }
 }

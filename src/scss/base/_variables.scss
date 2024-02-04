@@ -26,13 +26,14 @@ $register-label-color: black; // Color de etiquetas en el formulario de registro
 // Variables valores para los distintos tamaños de pantallas
 
 $small-screen: 600px; // Pantallas pequeñas
-$medium-screen-min: 601px; // Pantallas medianas (mínimo)
-$medium-screen-max: 1023px; // Pantallas medianas (máximo)
-$large-screen-min: 1024px; // Pantallas grandes (mínimo)
+$medium-screen-min: 767.5px; // Pantallas medianas (mínimo)
+$medium-screen-max: 990px; // Pantallas medianas (máximo)
+$large-screen-min: 991.20px; // Pantallas grandes (mínimo)
 
 // Configuración estandar para todas las pantallas
 body {
     font-family: $font-family;
     margin: 0;
     padding: 0;
+    min-width: 440px;
 }

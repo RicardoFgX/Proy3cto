@@ -1,110 +1,27 @@
-// Estilo para el elemento "barra-lateral"
-.barra-lateral {
-  grid-area: barra; // Utiliza el área de la cuadrícula llamada "barra"
-  display: flex;
-  flex-direction: column; // Establece la dirección de los elementos hijos como columna
-  gap: 0;
-  background-color: $secondary-color;
-  padding: 20px;
-  color: $text-color2;
-  width: 200px;
+#sidebar {
+    padding: 0;
+    min-width: 175px;
+}
 
-  // Estilos para la imagen del banner
-  img {
+#categorias ul.list-unstyled li:hover,
+#categorias ul.list-unstyled li.hovered {
+    padding-left: 5px;
+    border-radius: 15px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+#categorias ul.list-unstyled li.active {
+    padding-left: 5px;
+    border-radius: 15px;
+    background-color: #0056b3;
+    color: #fff;
+}
+
+#desmarcarBtn{
     margin-bottom: 10px;
-    border-radius: 5px;
-  }
+}
 
-  // Estilo para el elemento "categorias" dentro de .barra-lateral
-  #categorias {
-    h2 {
-      font-size: 1.5em;
-      margin: 0 0 10px 0;
-    }
-
-    // Estilo para la lista no ordenada dentro de "categorias"
-    ul {
-      list-style: none; // Elimina los estilos de lista predeterminados
-      padding: 0;
-
-      // Estilo para los elementos li dentro de la lista
-      li {
-        margin: 0;
-
-        // Estilo para los enlaces dentro de los elementos li
-        a {
-          text-decoration: none;
-          color: $text-color3;
-          font-weight: bold;
-          transition: color 0.3s;
-
-          // Estilo al pasar el ratón por encima
-          &:hover {
-            color: grey;
-          }
-        }
-      }
-    }
-  }
-
-  // Estilo para el elemento "filtros" dentro de .barra-lateral
-  #filtros {
-    h2 {
-      font-size: 1.5em;
-      margin: 0 0 10px 0;
-    }
-
-    // Estilo para la etiqueta "for" igual a "precio" dentro de "filtros"
-    label[for="precio"] {
-      font-weight: bold;
-    }
-
-    // Estilo para el input de tipo "range" dentro de "filtros"
-    input[type="range"] {
-      -webkit-appearance: none;
-      cursor: pointer;
-      width: 15rem;
-      color: $primary-color;
-      width: 100%;
-      margin: 5px 0 5px 0;
-      border-radius: 10px;
-
-      &::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%; // Slide redondo
-        background: $primary-color; // Color del Slide
-      }
-    }
-
-
-    // Estilo para el fieldset dentro de "filtros"
-    fieldset {
-      border: 1px solid white;
-      padding: 10px;
-      margin-top: 20px;
-
-      // Estilo para la leyenda dentro de fieldset
-      legend {
-        font-weight: bold;
-      }
-
-      // Estilo para la lista dentro de fieldset
-      ul {
-        list-style: none;
-        padding-left: 20px;
-
-        // Estilo para los elementos li dentro de la lista
-        li {
-          margin: 0;
-
-          // Estilo para el input de tipo "radio" dentro de los elementos li
-          input[type="radio"] {
-            margin: 5px 0;
-          }
-        }
-      }
-    }
-  }
+.tituloLat{
+    font-size: 30px;
 }

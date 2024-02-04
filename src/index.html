@@ -1,73 +1,33 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Bienvenido</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
 
- 
-  <title>Bootstrap w/ Webpack</title>
+    .container {
+      text-align: center;
+    }
+  </style>
 </head>
 
-<body id="paginaPrincipal">
-  <header>
+<body>
+  <div class="container">
+    <h1>Bienvenido</h1>
+    <p>Gracias por visitar nuestro sitio web.</p>
+    <a href="paginaPrincipal.html" class="btn btn-primary">Ir a la Página Principal</a>
+  </div>
 
-    <!-- Navbar de Bootstrap -->
-    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark navbar-custom">
-      <div class="container">
-
-        <!-- Logo e icono de la marca -->
-        <a class="navbar-brand" href="#">
-          <img src="images/LogoPagina.svg" alt="" width="30" height="30" class="d-inline-block align-top">
-          <span>Nombre de la Marca</span>
-        </a>
-
-        <!-- Botón de hamburguesa para dispositivos móviles -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Lista de enlaces a la derecha -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a href="paginaPrincipal.html" class="nav-link">
-                <i class="bi bi-house-door align-middle"></i> Inicio
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="formulario.html" class="nav-link">
-                <i class="bi bi-table align-middle"></i> Formulario
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="bi bi-grid align-middle"></i> Categorías
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="bi bi-cart align-middle"></i> Carrito
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="bi bi-bell align-middle"></i> Notificaciones
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="bi bi-person-circle align-middle"></i> Perfil
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
