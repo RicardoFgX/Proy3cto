@@ -25,6 +25,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({ template: './src/index.html', filename: 'index.html' }),
     new HtmlWebpackPlugin({ template: './src/formulario.html', filename: 'formulario.html' }),
+    new HtmlWebpackPlugin({ template: './src/estadisticas.html', filename: 'estadisticas.html' }),
     new HtmlWebpackPlugin({ template: './src/paginaPrincipal.html', filename: 'paginaPrincipal.html' }),
     new miniCssExtractPlugin(),
     new CopyWebPackPlugin({

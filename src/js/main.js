@@ -75,8 +75,59 @@ function mostrarToast(mensaje, colorFondo, colorTexto, duracion) {
     var bootstrapToast = new bootstrap.Toast(toast);
     bootstrapToast.show();
 
-    // Oculta el Toast después de la duración especificada
+    // Oculta el Toast después de 3 segundos
     setTimeout(function() {
         bootstrapToast.hide();
     }, duracion);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Datos para el gráfico de barras
+    var datosBarras = {
+      labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
+      datasets: [{
+        label: "Ventas Mensuales",
+        data: [70, 20, 45, 40, 50],
+        backgroundColor: "rgba(75, 192, 192, 0.2)",
+        borderColor: "rgba(75, 192, 192, 1)",
+        borderWidth: 1
+      }]
+    };
+
+    // Configuración del gráfico de barras
+    var configuracionBarras = {
+      type: "bar",
+      data: datosBarras,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    };
+
+    // Crear el gráfico de barras
+    var ctxBarras = document.getElementById("graficoBarras").getContext("2d");
+    new Chart(ctxBarras, configuracionBarras);
+
+    // Datos para el gráfico de pastel
+    var datosPastel = {
+      labels: ["Jabones tipo A", "Jabones tipo B", "Jabones tipo C"],
+      datasets: [{
+        data: [70, 30, 50],
+        backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"],
+        hoverBackgroundColor: ["#FF6384", "#36A2EB", "#FFCE56"]
+      }]
+    };
+
+    // Configuración del gráfico de pastel
+    var configuracionPastel = {
+      type: "doughnut",
+      data: datosPastel
+    };
+
+    // Crear el gráfico de pastel
+    var ctxPastel = document.getElementById("graficoPastel").getContext("2d");
+    new Chart(ctxPastel, configuracionPastel);
+  });
