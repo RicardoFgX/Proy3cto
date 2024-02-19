@@ -37,3 +37,95 @@ body {
     padding: 0;
     min-width: 440px;
 }
+
+/* Estilos generales */
+body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Estilos para el tema claro */
+  body.bg-light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  body.bg-light #content nav ol {
+    background-color: #B0E4FF;
+  }
+  
+  /* Estilos para el tema oscuro */
+  body.bg-dark {
+    background-color: #2d2d2d;
+    color: #ffffff;
+  }
+  
+  /* Estilos adicionales para el tema oscuro */
+  body.bg-dark button {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  body.bg-dark header {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  body.bg-dark footer {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  body.bg-dark ol {
+    background-color: #333333;
+  }
+  
+  body.bg-dark .breadcrumb-item a {
+    color: #ffffff;
+  }
+  
+  body.bg-dark .breadcrumb li+li::before {
+    color: #ffffff;
+  }
+  
+  /* Estilos adicionales para el tema oscuro del formulario */
+  body.bg-dark .formulario {
+    background-color: #343a40;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+  
+  body.bg-dark .formulario legend {
+    color: #ffffff;
+  }
+  
+  body.bg-dark .formulario .form-group label {
+    color: #ffffff;
+  }
+  
+  body.bg-dark .formulario .form-control {
+    background-color: #495057;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  body.bg-dark .formulario select.form-control {
+    background-color: #495057;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+  
+  /* Estilos adicionales para el tema oscuro de los placeholders en el formulario */
+  body.bg-dark .formulario ::placeholder {
+    color: #a8a8a8;
+  }
+
+  body.bg-light #luna {
+  }
+
+  body.bg-light #sol {
+    display: none;
+  }
+
+  #luna{
+    width: 40px;
+  }

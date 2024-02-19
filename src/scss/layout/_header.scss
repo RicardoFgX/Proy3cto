@@ -1,5 +1,6 @@
 /* Centra verticalmente el contenido del encabezado en la barra de navegación */
 header {
+  background-color: #3498db;
 
   img {
     border-radius: 50%;
@@ -24,8 +25,4 @@ header {
       margin: 0.25rem;
     }
   }
-}
-
-.navbar-custom {
-  background-color: #3498db;
 }

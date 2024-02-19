@@ -4,10 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Registro</title>
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
-<body>
+<body class="bg-light">
   <header>
     <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark navbar-custom">
       <div class="container-fluid" style="margin-left: 20px; margin-right: 20px;">
@@ -55,6 +56,12 @@
                 <i class="bi bi-person-circle align-middle"></i> Perfil
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link">
+                <i id="sol" class="bi bi-brightness-high" onclick="toggleTheme()"></i>
+                <i id="luna" class="bi bi-moon-fill" onclick="toggleTheme()"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -64,14 +71,14 @@
     <div class="row">
       <div id="content" class="col">
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb bg-light p-2 rounded">
-            <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-muted">Inicio de sesión</a></li>
+          <ol class="breadcrumb p-2 rounded">
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Inicio de sesión</a></li>
             <li class="breadcrumb-item active text-primary" aria-current="page">Formulario de registro</li>
           </ol>
         </nav>
-        <div class="formularioGlobal d-flex justify-content-center">
-          <!-- Formulario de Registro -->
+        <!-- Formulario de Registro -->
+        <div class="formularioGlobal d-flex justify-content-center"> 
           <form action="#" method="post" class="formulario">
             <fieldset>
               <legend>Formulario</legend>
@@ -189,7 +196,6 @@
       </div>
     </div>
   </div>
-
   <footer>
     <div id="informacion-tienda">
       <h2>Información de la Tienda</h2>
@@ -205,15 +211,32 @@
       </ul>
     </div>
     <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank">
-      <img src="images/Licencia0.png" alt="Licencia Creative Commons 0" id="licencia">
+      <img src="images/Licencia0.png" alt="licencia" id="licencia">
     </a>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle('bg-light');
+      body.classList.toggle('bg-dark');
+
+      // Alternar la visibilidad de los iconos de sol y luna según el tema
+      const solIcon = document.getElementById('sol');
+      const lunaIcon = document.getElementById('luna');
+      if (body.classList.contains('bg-dark')) {
+        solIcon.style.display = 'inline';
+        lunaIcon.style.display = 'none';
+      } else {
+        solIcon.style.display = 'none';
+        lunaIcon.style.display = 'inline';
+      }
+    }
+  </script>
+
 </body>
 
 </html>
