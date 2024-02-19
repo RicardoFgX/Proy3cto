@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Registro</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
 </head>
 
 <body>
@@ -13,7 +12,8 @@
     <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark navbar-custom">
       <div class="container-fluid" style="margin-left: 20px; margin-right: 20px;">
         <a class="navbar-brand" href="paginaPrincipal.html">
-          <img src="images/LogoPagina.svg" alt="" width="50" height="50" class="d-inline-block align-top">
+          <img src="images/LogoPagina.svg" alt="Logo de Candy Soap" width="50" height="50"
+            class="d-inline-block align-top">
         </a>
 
         <h1 id="nombreEmpresa" class="text-white font-italic custom-font">Candy Soap</h1>
@@ -61,7 +61,7 @@
     </nav>
   </header>
   <div class="container-fluid">
-    <div class="row" >
+    <div class="row">
       <div id="content" class="col">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb bg-light p-2 rounded">
@@ -78,67 +78,61 @@
 
               <!-- Nombre -->
               <div class="form-group">
-                <label for="nombre" data-toggle="tooltip" data-placement="top"
-                  title="Introduce tu nombre">Nombre<span>*</span>:</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" pattern="ricardo"
+                <label for="nombre">Nombre<span></span>:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1" pattern="ricardo"
                   title="El nombre debe ser 'ricardo'" required maxlength="20">
               </div>
 
               <!-- Apellidos -->
               <div class="form-group">
-                <label for="apellidos" data-toggle="tooltip" data-placement="top"
-                  title="Introduce tus apellidos">Apellidos<span>*</span>:</label>
-                <input type="text" class="form-control" id="apellidos" name="apellidos" pattern="fernandez guzman"
-                  title="Los apellidos deben ser 'fernandez guzmán'" required maxlength="40">
+                <label for="apellidos">Apellidos<span></span></label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" tabindex="2"
+                  pattern="fernandez guzman" title="Los apellidos deben ser 'fernandez guzmán'" required maxlength="40">
               </div>
 
               <!-- Email -->
               <div class="form-group">
-                <label for="email" data-toggle="tooltip" data-placement="top"
-                  title="Introduce tu correo electrónico">Email<span>*</span>:</label>
-                <input type="email" class="form-control" id="email" name="email" required
+                <label for="email">Email<span></span></label>
+                <input type="email" class="form-control" id="email" name="email" tabindex="3" required
                   placeholder="correo@ejemplo.com">
               </div>
 
               <!-- Contraseña -->
               <div class="form-group">
                 <label for="contrasena" data-toggle="tooltip" data-placement="top"
-                  title="Al menos 8 caracteres, 1 mayúscula, 1 minúscula, 1 número, 1 símbolo">Contraseña<span>*</span>:</label>
-                <input type="password" class="form-control" id="contrasena" name="contrasena" required
-                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}$">
+                  title="Al menos 8 caracteres, 1 mayúscula, 1 minúscula, 1 número, 1 símbolo">
+                  Contraseña <em>(Al menos 8 caracteres, 1 mayúscula, 1 minúscula, 1 número, 1 símbolo)</em>
+                </label>
+                <input type="password" class="form-control" id="contrasena" name="contrasena" tabindex="4" required
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
               </div>
 
               <!-- Número de Teléfono -->
               <div class="form-group">
-                <label for="telefono" data-toggle="tooltip" data-placement="top"
-                  title="Número de Teléfono (+XX-XXXX-XXXXX)">Número de Teléfono:</label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" pattern="^\+\d{2}-\d{4}-\d{5}"
-                  placeholder="+XX-XXXX-XXXXX">
+                <label for="telefono">Número de Teléfono <abbr title="Formato esperado">(+XX-XXXX-XXXXX)</abbr></label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" tabindex="5"
+                  pattern="^\+\d{2}-\d{4}-\d{5}">
               </div>
 
               <!-- Fecha de Nacimiento -->
               <div class="form-group">
-                <label for="fechaNacimiento" data-toggle="tooltip" data-placement="top"
-                  title="Fecha de Nacimiento (debes tener al menos 18 años)">Fecha de Nacimiento:</label>
-                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" max="2005-11-07" title="Debes introducir una fecha mayor de 18 años">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" tabindex="6"
+                  max="2005-11-07" title="Debes introducir una fecha mayor de 18 años">
               </div>
 
               <!-- URL de la página web -->
               <div class="form-group">
-                <label for="url" data-toggle="tooltip" data-placement="top"
-                  title="URL de la página web (debe seguir un formato válido y restringido)">URL de la página
-                  web:</label>
-                <input type="url" class="form-control" id="url" name="url"
+                <label for="url">URL de la página web <em>(debe seguir un formato válido y restringido)</em></label>
+                <input type="url" class="form-control" id="url" name="url" tabindex="7"
                   pattern="https://ricardo-fernandez-guzman.com"
                   title="El dominio tiene que tener 'https://ricardo-fernandez-guzman.com'"
-                  placeholder="https://www.ejemplo.com">
+                  placeholder="https://www.ejemplo.com" required>
               </div>
-
               <!-- Dropdown para Comunidad Autónoma -->
               <div class="form-group">
-                <label for="comunidadAutonoma" data-toggle="tooltip" data-placement="top"
-                  title="Selecciona tu comunidad autónoma">Comunidad Autónoma:</label>
-                <select class="form-control" id="comunidadAutonoma" name="comunidadAutonoma">
+                <label for="comunidadAutonoma" aria-label="Comunidad Autónoma">Comunidad Autónoma</label>
+                <select class="form-control" id="comunidadAutonoma" name="comunidadAutonoma" tabindex="8">
                   <!-- Agrega las opciones de las comunidades autónomas aquí -->
                   <option value="andalucia">Andalucía</option>
                   <option value="aragon">Aragón</option>
@@ -161,9 +155,9 @@
 
               <!-- Botones de Enviar y Cancelar -->
               <div class="form-group">
-                <button type="submit" class="btn btn-primary">Enviar</button>
-                <button type="button" class="btn btn-secondary" data-toggle="modal"
-                  data-target="#cancelarModal">Cancelar</button>
+                <button type="submit" class="btn btn-primary" tabindex="9">Enviar</button>
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#cancelarModal"
+                  tabindex="10">Cancelar</button>
               </div>
             </fieldset>
           </form>
@@ -186,8 +180,10 @@
           ¿Estás seguro de que quieres cancelar el registro? Se perderán los datos ingresados.
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">No, continuar registro</button>
-          <button type="button" class="btn btn-danger" onclick="window.location.href='paginaPrincipal.html'">Sí,
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" tabindex="11">No, continuar
+            registro</button>
+          <button type="button" class="btn btn-danger" onclick="window.location.href='paginaPrincipal.html'"
+            tabindex="12">Sí,
             cancelar registro</button>
         </div>
       </div>
@@ -209,13 +205,15 @@
       </ul>
     </div>
     <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank">
-      <img src="images/Licencia0.png" alt="licencia" id="licencia" />
+      <img src="images/Licencia0.png" alt="Licencia Creative Commons 0" id="licencia">
     </a>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </body>
 
 </html>
