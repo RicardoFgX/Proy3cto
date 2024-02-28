@@ -12107,7 +12107,7 @@ body.bg-light #sol {
 
 /* Centra verticalmente el contenido del encabezado en la barra de navegación */
 header {
-  background-color: #3498db;
+  background-color: #0D3652;
 }
 header img {
   border-radius: 50%;
@@ -12116,6 +12116,7 @@ header img {
 header #nombreEmpresa {
   margin: 0;
   text-align: center;
+  color: #00B2D9;
 }
 header .custom-font {
   font-size: 30px;
@@ -12126,6 +12127,12 @@ header .navbar-nav {
 }
 header .navbar-nav .navbar-nav .nav-link {
   margin: 0.25rem;
+}
+header .navbar-dark .navbar-nav .nav-link {
+  color: #00B2D9;
+}
+header .breadColor {
+  color: white;
 }
 
 #sidebar {
@@ -12165,7 +12172,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #3498db;
+  background-color: #0D3652;
   padding: 20px;
 }
 footer #informacion-tienda {

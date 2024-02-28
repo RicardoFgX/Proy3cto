@@ -10,54 +10,54 @@
 
 <body class="bg-light">
   <header>
-    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark navbar-custom">
+    <nav class="navbar navbar-expand-lg navbar-expand-md navbar-dark navbar-custom" role="navigation">
       <div class="container-fluid" style="margin-left: 20px; margin-right: 20px;">
         <a class="navbar-brand" href="paginaPrincipal.html">
           <img src="images/LogoPagina.svg" alt="Logo de Candy Soap" width="50" height="50"
-            class="d-inline-block align-top">
+            class="d-inline-block align-top" aria-label="Logo de Candy Soap">
         </a>
 
-        <h1 id="nombreEmpresa" class="text-white font-italic custom-font">Candy Soap</h1>
+        <h1 id="nombreEmpresa" class="font-italic custom-font" aria-label="Nombre de la empresa">Candy Soap</h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse" id="navbarNav" role="navigation">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="paginaPrincipal.html" class="nav-link">
+              <a href="paginaPrincipal.html" class="nav-link" aria-label="Ir a Inicio">
                 <i class="bi bi-house-door align-middle"></i> Inicio
               </a>
             </li>
             <li class="nav-item active">
-              <a href="formulario.html" class="nav-link">
+              <a href="formulario.html" class="nav-link" aria-label="Ir a Formulario">
                 <i class="bi bi-table align-middle"></i> Formulario
               </a>
             </li>
             <li class="nav-item">
-              <a href="estadisticas.html" class="nav-link">
+              <a href="estadisticas.html" class="nav-link" aria-label="Ir a Estadísticas">
                 <i class="bi bi-grid align-middle"></i> Estadísticas
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" aria-label="Ir a Carrito">
                 <i class="bi bi-cart align-middle"></i> Carrito
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" id="activarToast">
+              <a href="#" class="nav-link" id="activarToast" aria-label="Ir a Notificaciones">
                 <i class="bi bi-bell align-middle"></i> Notificaciones
               </a>
               <div class="position-fixed bottom-0 end-0 p-3" id="toast-container" style="z-index: 1050;">
               </div>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link" aria-label="Ir a Perfil">
                 <i class="bi bi-person-circle align-middle"></i> Perfil
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link">
+              <a class="nav-link" aria-label="Alternar Tema">
                 <i id="sol" class="bi bi-brightness-high" onclick="toggleTheme()"></i>
                 <i id="luna" class="bi bi-moon-fill" onclick="toggleTheme()"></i>
               </a>
@@ -72,74 +72,83 @@
       <div id="content" class="col">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb p-2 rounded">
-            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Inicio</a></li>
-            <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Inicio de sesión</a></li>
-            <li class="breadcrumb-item active text-primary" aria-current="page">Formulario de registro</li>
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none" style="color: #054D9D;"
+                aria-label="Ir a Inicio">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="#" class="text-decoration-none" style="color: #054D9D;"
+                aria-label="Ir a Inicio de sesión">Inicio de sesión</a></li>
+            <li class="breadcrumb-item active text-primary" aria-current="page" style="color: #054D9D;"><a href="#"
+                class="text-decoration-none" style="color: #054D9D;" aria-label="Ir a Formulario de registro">Formulario
+                de registro</a></li>
           </ol>
         </nav>
         <!-- Formulario de Registro -->
-        <div class="formularioGlobal d-flex justify-content-center"> 
+        <div class="formularioGlobal d-flex justify-content-center" role="form" aria-labelledby="registroForm">
           <form action="#" method="post" class="formulario">
             <fieldset>
-              <legend>Formulario</legend>
+              <legend id="registroForm" aria-label="Formulario de Registro">Formulario</legend>
 
               <!-- Nombre -->
               <div class="form-group">
-                <label for="nombre">Nombre<span></span>:</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" tabindex="1" pattern="ricardo"
-                  title="El nombre debe ser 'ricardo'" required maxlength="20">
+                <label for="nombre" aria-labelledby="nombre">Nombre<span></span>:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" tabindex="0" pattern="ricardo"
+                  title="El nombre debe ser 'ricardo'" required maxlength="20" aria-labelledby="nombre">
               </div>
 
               <!-- Apellidos -->
               <div class="form-group">
-                <label for="apellidos">Apellidos<span></span></label>
-                <input type="text" class="form-control" id="apellidos" name="apellidos" tabindex="2"
-                  pattern="fernandez guzman" title="Los apellidos deben ser 'fernandez guzmán'" required maxlength="40">
+                <label for="apellidos" aria-labelledby="apellidos">Apellidos<span></span></label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos" tabindex="0"
+                  pattern="fernandez guzman" title="Los apellidos deben ser 'fernandez guzmán'" required maxlength="40"
+                  aria-labelledby="apellidos">
               </div>
 
               <!-- Email -->
               <div class="form-group">
-                <label for="email">Email<span></span></label>
-                <input type="email" class="form-control" id="email" name="email" tabindex="3" required
-                  placeholder="correo@ejemplo.com">
+                <label for="email" aria-labelledby="email">Email<span></span></label>
+                <input type="email" class="form-control" id="email" name="email" tabindex="0" required
+                  placeholder="correo@ejemplo.com" aria-labelledby="email">
               </div>
 
               <!-- Contraseña -->
               <div class="form-group">
-                <label for="contrasena" data-toggle="tooltip" data-placement="top"
+                <label for="contrasena" aria-labelledby="contrasena" data-toggle="tooltip" data-placement="top"
                   title="Al menos 8 caracteres, 1 mayúscula, 1 minúscula, 1 número, 1 símbolo">
                   Contraseña <em>(Al menos 8 caracteres, 1 mayúscula, 1 minúscula, 1 número, 1 símbolo)</em>
                 </label>
-                <input type="password" class="form-control" id="contrasena" name="contrasena" tabindex="4" required
-                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}">
+                <input type="password" class="form-control" id="contrasena" name="contrasena" tabindex="0" required
+                  pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W).{8,}" aria-labelledby="contrasena">
               </div>
 
               <!-- Número de Teléfono -->
               <div class="form-group">
-                <label for="telefono">Número de Teléfono <abbr title="Formato esperado">(+XX-XXXX-XXXXX)</abbr></label>
-                <input type="tel" class="form-control" id="telefono" name="telefono" tabindex="5"
-                  pattern="^\+\d{2}-\d{4}-\d{5}">
+                <label for="telefono" aria-labelledby="telefono">Número de Teléfono <abbr
+                    title="Formato esperado">(+XX-XXXX-XXXXX)</abbr></label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" tabindex="0"
+                  pattern="^\+\d{2}-\d{4}-\d{5}" aria-labelledby="telefono">
               </div>
 
               <!-- Fecha de Nacimiento -->
               <div class="form-group">
-                <label for="fechaNacimiento">Fecha de Nacimiento</label>
-                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" tabindex="6"
-                  max="2005-11-07" title="Debes introducir una fecha mayor de 18 años">
+                <label for="fechaNacimiento" aria-labelledby="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" tabindex="0"
+                  max="2005-11-07" title="Debes introducir una fecha mayor de 18 años"
+                  aria-labelledby="fechaNacimiento">
               </div>
 
               <!-- URL de la página web -->
               <div class="form-group">
-                <label for="url">URL de la página web <em>(debe seguir un formato válido y restringido)</em></label>
-                <input type="url" class="form-control" id="url" name="url" tabindex="7"
+                <label for="url" aria-labelledby="url">URL de la página web <em>(debe seguir un formato válido y
+                    restringido)</em></label>
+                <input type="url" class="form-control" id="url" name="url" tabindex="0"
                   pattern="https://ricardo-fernandez-guzman.com"
                   title="El dominio tiene que tener 'https://ricardo-fernandez-guzman.com'"
-                  placeholder="https://www.ejemplo.com" required>
+                  placeholder="https://www.ejemplo.com" required aria-labelledby="url">
               </div>
               <!-- Dropdown para Comunidad Autónoma -->
               <div class="form-group">
-                <label for="comunidadAutonoma" aria-label="Comunidad Autónoma">Comunidad Autónoma</label>
-                <select class="form-control" id="comunidadAutonoma" name="comunidadAutonoma" tabindex="8">
+                <label for="comunidadAutonoma" aria-labelledby="comunidadAutonoma">Comunidad Autónoma</label>
+                <select class="form-control" id="comunidadAutonoma" name="comunidadAutonoma" tabindex="0"
+                  aria-labelledby="comunidadAutonoma">
                   <!-- Agrega las opciones de las comunidades autónomas aquí -->
                   <option value="andalucia">Andalucía</option>
                   <option value="aragon">Aragón</option>
@@ -162,9 +171,9 @@
 
               <!-- Botones de Enviar y Cancelar -->
               <div class="form-group">
-                <button type="submit" class="btn btn-primary" tabindex="9">Enviar</button>
+                <button type="submit" class="btn btn-primary" tabindex="0" aria-label="Enviar">Enviar</button>
                 <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#cancelarModal"
-                  tabindex="10">Cancelar</button>
+                  tabindex="0" aria-label="Cancelar">Cancelar</button>
               </div>
             </fieldset>
           </form>
@@ -173,7 +182,7 @@
     </div>
   </div>
   <!-- Modal para Cancelar -->
-  <div class="modal fade" id="cancelarModal" tabindex="-1" role="dialog" aria-labelledby="cancelarModalLabel"
+  <div class="modal fade" id="cancelarModal" tabindex="0" role="dialog" aria-labelledby="cancelarModal"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -205,19 +214,19 @@
     <div id="enlaces-interes">
       <h2>Enlaces de Interés</h2>
       <ul>
-        <li><a href="#">Términos y Condiciones</a></li>
-        <li><a href="#">Política de Privacidad</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#" aria-label="Ir a Términos y Condiciones">Términos y Condiciones</a></li>
+        <li><a href="#" aria-label="Ir a Política de Privacidad">Política de Privacidad</a></li>
+        <li><a href="#" aria-label="Ir a Contacto">Contacto</a></li>
       </ul>
     </div>
     <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es" target="_blank">
-      <img src="images/Licencia0.png" alt="licencia" id="licencia">
+      <img src="images/Licencia0.png" alt="licencia" id="licencia" aria-label="Licencia Creative Commons 0">
     </a>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+  </script>
   <script>
     function toggleTheme() {
       const body = document.body;

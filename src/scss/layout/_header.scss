@@ -1,6 +1,6 @@
 /* Centra verticalmente el contenido del encabezado en la barra de navegación */
 header {
-  background-color: #3498db;
+  background-color: #0D3652;
 
   img {
     border-radius: 50%;
@@ -10,6 +10,7 @@ header {
   #nombreEmpresa {
     margin: 0;
     text-align: center;
+    color: #00B2D9;
   }
 
   .custom-font {
@@ -25,4 +26,13 @@ header {
       margin: 0.25rem;
     }
   }
+  
+  .navbar-dark .navbar-nav .nav-link{
+    color: #00B2D9;
+  }
+
+  .breadColor{
+    color: white;
+  } 
+  //#054D9D
 }
