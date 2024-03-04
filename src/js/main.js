@@ -82,7 +82,8 @@ function mostrarToast(mensaje, colorFondo, colorTexto, duracion) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Datos para el gráfico de barras
+  if (window.location.pathname.endsWith("estadisticas.html")) {
+    // Datos y configuración del gráfico de barras
     var datosBarras = {
       labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo"],
       datasets: [{
@@ -94,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }]
     };
 
-    // Configuración del gráfico de barras
     var configuracionBarras = {
       type: "bar",
       data: datosBarras,
@@ -108,10 +108,10 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Crear el gráfico de barras
-    var ctxBarras = document.getElementById("graficoBarras").getContext("2d");
+    var ctxBarras = document.getElementById("graficoBarras");
     new Chart(ctxBarras, configuracionBarras);
 
-    // Datos para el gráfico de pastel
+    // Datos y configuración del gráfico de pastel
     var datosPastel = {
       labels: ["Jabones tipo A", "Jabones tipo B", "Jabones tipo C"],
       datasets: [{
@@ -121,7 +121,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }]
     };
 
-    // Configuración del gráfico de pastel
     var configuracionPastel = {
       type: "doughnut",
       data: datosPastel
@@ -130,4 +129,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Crear el gráfico de pastel
     var ctxPastel = document.getElementById("graficoPastel").getContext("2d");
     new Chart(ctxPastel, configuracionPastel);
-  });
+  }
+});
